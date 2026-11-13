@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <title>SYSTEM BREACH - [ajak_syndicate]</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: monospace;
+            font-size: 20px;
+            padding: 20px;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal"></div>
+    <script>
+        // Tulis nama samaran anda di sini (boleh ulang banyak kali)
+        const text = "[ACCESS GRANTED] >>> ajak_syndicate - SYSTEM COMPROMISED - HACKING IN PROGRESS... ";
+        let index = 0;
+        
+        document.addEventListener('keydown', function(event) {
+            // Setiap kali tekan 3 huruf, paparkan teks nama anda
+            for(let i = 0; i < 4; i++) {
+                if(index < text.length) {
+                    document.getElementById('terminal').innerHTML += text.charAt(index);
+                    index++;
+                } else {
+                    index = 0; // Ulang balik teks bila habis
+                }
+            }
+            window.scrollTo(0,document.body.scrollHeight);
+        });
+    </script>
+</body>
+</html>
